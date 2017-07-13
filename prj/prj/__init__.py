@@ -1,3 +1,9 @@
+import sys
+
+def fun(frame, event, arg):
+    print(frame.f_code.co_name)
+
+sys.settrace(fun)
 try:
     from ._mod import _append
 except ImportError:
