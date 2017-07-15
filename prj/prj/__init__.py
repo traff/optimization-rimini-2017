@@ -2,6 +2,7 @@ import sys
 
 def fun(frame, event, arg):
     print(frame.f_code.co_name)
+    return fun
 
 sys.settrace(fun)
 try:
